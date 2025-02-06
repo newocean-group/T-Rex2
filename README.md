@@ -15,7 +15,7 @@ This repository contains an implementation of [T-Rex2](https://arxiv.org/pdf/240
 ### 🖼️ Visual Results: 
 <img src="assets\result\results.gif" width="100%">
 
-**Note** : This model has been trained for approximately 2.7M steps
+**Note** : This model has been trained for approximately 2.7M steps (batch size = 1).
 
 ### ⚙️ Installation
 To use the model, follow these steps:
