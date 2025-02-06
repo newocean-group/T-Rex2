@@ -13,8 +13,7 @@ This repository contains an implementation of [T-Rex2](https://arxiv.org/pdf/240
 - **coco2017**
 
 ### 🖼️ Visual Results: 
-
-![](assets\result\results.gif)
+<img src="assets\result\results.gif" width="100%">
 **Note** : This model has been trained for approximately 2.7M steps, whereas in the paper, the authors trained the model for about 60M steps:
 - ~24M steps for text encoder + image encoder + box decoder
 - ~36M steps for visual encoder + text encoder + box decoder + image encoder
