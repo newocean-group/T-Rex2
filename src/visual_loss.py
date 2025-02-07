@@ -89,6 +89,7 @@ class SetCriterion(nn.Module):
     def loss_labels_focal(self, outputs, targets, indices, num_boxes, log=True):
         assert "pred_logits" in outputs
         src_logits = outputs["pred_logits"]
+        _, _, nc = src_logits.shape
 
         idx = self._get_src_permutation_idx(indices)
         target_classes_o = torch.cat(
@@ -96,13 +97,13 @@ class SetCriterion(nn.Module):
         )
         target_classes = torch.full(
             src_logits.shape[:2],
-            0,  # for background
+            nc,
             dtype=torch.int64,
             device=src_logits.device,
         )
         target_classes[idx] = target_classes_o
 
-        target = F.one_hot(target_classes, num_classes=2)[..., 1:].float()
+        target = F.one_hot(target_classes, num_classes=nc + 1)[..., :-1].float()
         loss = torchvision.ops.sigmoid_focal_loss(
             src_logits, target, self.alpha, self.gamma, reduction="none"
         )
