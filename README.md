@@ -1,6 +1,6 @@
 # [T-Rex2: Towards Generic Object Detection](https://github.com/newocean-group/T-Rex2)
 
-This repository contains an implementation of [T-Rex2](https://arxiv.org/pdf/2403.14610). Currently, only the visual encoder has been implemented.
+This repository contains an unofficial implementation of [T-Rex2](https://arxiv.org/pdf/2403.14610). Currently, only the visual encoder has been implemented.
 
 ### 📖 Model Architecture:
 <img src="assets\paper\model_architecture.jpg" alt="model architecture" width=100%>
