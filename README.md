@@ -10,12 +10,12 @@ This repository contains an unofficial implementation of [T-Rex2](https://arxiv.
 - **OpenImageV7**
 - **CrowdHuman**
 - **Hiertext**
-- **coco2017**
+- **lvis**
 
 ### 🖼️ Visual Results: 
 <img src="assets\result\results.gif" width="100%">
 
-**Note** : This model has been trained for approximately 2.7M steps (batch size = 1).
+**Note** : This model has been trained for approximately 2.7M steps (batch size = 1) and is still in the training process.
 
 ### ⚙️ Installation
 To use the model, follow these steps:
