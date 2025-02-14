@@ -10,7 +10,7 @@ This repository contains an unofficial implementation of [T-Rex2](https://arxiv.
 - **OpenImageV7**
 - **CrowdHuman**
 - **Hiertext**
-- **lvis**
+- **LVIS**
 
 ### 🖼️ Visual Results: 
 <img src="assets\result\results.gif" width="100%">
@@ -58,3 +58,10 @@ This model has been implemented based on my current knowledge and can be further
 Additionally, the model can be modified for instance segmentation based on the approach described in this [paper](https://arxiv.org/pdf/2411.08569). The modified model architecture would resemble the following:
 
 <img src="assets\result\model_architecture.jpg" alt="model architecture" width=100%>
+
+### References
+- [DETR](https://github.com/facebookresearch/detr)
+- [Deformable-DETR](https://github.com/fundamentalvision/Deformable-DETR)
+- [DN-DETR](https://github.com/IDEA-Research/DN-DETR)
+- [GroundingDINO](https://github.com/IDEA-Research/GroundingDINO)
+- [RT-DETR](https://github.com/lyuwenyu/RT-DETR)
