@@ -1,4 +1,4 @@
-# [T-Rex2: Towards Generic Object Detection](https://github.com/newocean-group/T-Rex2)
+# [T-Rex2: Towards Generic Object Detection via Text-Visual Prompt Synergy](https://github.com/newocean-group/T-Rex2)
 
 This repository contains an unofficial implementation of [T-Rex2](https://arxiv.org/pdf/2403.14610). Currently, only the visual encoder has been implemented.
 
@@ -7,10 +7,13 @@ This repository contains an unofficial implementation of [T-Rex2](https://arxiv.
 
 ### 📃Datasets are used for training the model:
 - **Object365**
-- **OpenImageV7**
+- **OpenImagesV7**
 - **CrowdHuman**
 - **Hiertext**
 - **LVIS**
+
+### <img src="assets\result\process_icon.png" width="16" height="16"> To train the model without text prompts and with a batch size of 1 due to hardware limitations. I use the following training process:
+<img src='assets\result\training_process.png' width='100%'> 
 
 ### 🖼️ Visual Results: 
 <img src="assets\result\results.gif" width="100%">
