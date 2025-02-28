@@ -453,3 +453,40 @@ class TRex2(nn.Module):
             out["dn_aux_outputs"] = self._set_aux_loss(dn_out_logits, dn_out_bboxes)
             out["dn_meta"] = dn_meta
         return out, visual_embeds_list
+
+    def forward_for_cls_embeddings(
+        self,
+        tensor_list: NestedTensor,
+        embeds,
+    ):
+        # memory
+        memory, mask_flatten, spatial_shapes, level_start_index, valid_ratios = (
+            self.image_encoder(tensor_list)
+        )
+
+        # box decoder
+        out_bboxes, out_logits, dn_out_bboxes, dn_out_logits, dn_meta = (
+            self.box_decoder(
+                memory=memory,
+                mask_flatten=mask_flatten,
+                spatial_shapes=spatial_shapes,
+                level_start_index=level_start_index,
+                valid_ratios=valid_ratios,
+                visual_embed=embeds,
+                targets=None,
+            )
+        )
+        out = {"pred_logits": out_logits[-1], "pred_boxes": out_bboxes[-1]}
+        out["aux_outputs"] = self._set_aux_loss(out_logits[:-1], out_bboxes[:-1])
+        if dn_meta is not None:
+
+            out["dn_aux_outputs"] = self._set_aux_loss(dn_out_logits, dn_out_bboxes)
+            out["dn_meta"] = dn_meta
+        return out, embeds
+
+    @torch.jit.unused
+    def _set_aux_loss(self, outputs_class, outputs_coord):
+        return [
+            {"pred_logits": a, "pred_boxes": b}
+            for a, b in zip(outputs_class[:-1], outputs_coord[:-1])
+        ]

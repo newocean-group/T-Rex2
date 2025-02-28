@@ -53,6 +53,8 @@ To use the model, follow these steps:
 ### 🔍 Demo
 I have attached a .ipynb [file](demo.ipynb) in the repository. You can refer to it to know how to use the model.
 
+Additionally, I have provided another .ipynb [file](cls_embeddings.ipynb) that illustrates the process of learning class embeddings for the model.
+
 **Note**: You may need to adjust the threshold value to achieve the best results.
 
 ### 💡 Conclusion
