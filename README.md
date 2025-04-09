@@ -1,4 +1,5 @@
 # [T-Rex2: Towards Generic Object Detection via Text-Visual Prompt Synergy](https://github.com/newocean-group/T-Rex2)
+<a href="https://colab.research.google.com/drive/1bi7ITH8fmSR6_aleA7M698HN45ea-4n9#scrollTo=eE9AEWpMu-rA"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
 
 This repository contains an unofficial implementation of [T-Rex2](https://arxiv.org/pdf/2403.14610). Currently, only the visual encoder has been implemented.
 
