@@ -172,4 +172,3 @@ cython_debug/
 
 
 /saved_model
-!ops/**/*
