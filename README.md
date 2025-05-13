@@ -3,6 +3,7 @@
 
 This repository contains an unofficial implementation of [T-Rex2](https://arxiv.org/pdf/2403.14610). Currently, only the visual encoder has been implemented.
 
+Deepwiki docs: https://deepwiki.com/newocean-group/T-Rex2.
 ### 📖 Model Architecture:
 <img src="assets\paper\model_architecture.jpg" alt="model architecture" width=100%>
 
